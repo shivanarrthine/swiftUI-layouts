@@ -12,6 +12,11 @@ let screen = UIScreen.main.bounds
 struct InstagramView: View {
     @State var showStory : Bool = false
     
+    init(){
+        UITabBar.appearance().barTintColor = .white
+        UITabBar.appearance().isTranslucent = false
+    }
+    
     var body: some View {
         
         ZStack{
@@ -84,7 +89,7 @@ struct InstagramView: View {
                 Image(systemName: "house.fill")
             }
             
-            Text("Feed").tabItem {
+            InstagramSearchView().tabItem {
                 Image(systemName: "magnifyingglass")
             }
             
@@ -97,9 +102,10 @@ struct InstagramView: View {
             }
             
             Text("Profile").tabItem {
-                Image(systemName: "person")
+                Image(systemName: "person.crop.circle.fill")
             }
         }
+        .font(.system(size: 20))
         .accentColor(.primary)
     }
 }
@@ -147,7 +153,7 @@ struct InstagramPost: View {
                     Text("username").bold() +
                         Text(" Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla maximus ex ac sapien lacinia convallis. Nulla maximus ex ac sapien lacinia convallis.")
                 }
-                .font(.caption)
+                .font(.footnote)
                 .multilineTextAlignment(.leading)
                 .lineLimit(2)
                 
@@ -181,7 +187,7 @@ struct StoryBubble: View {
                             isViewed ?
                                 LinearGradient(gradient: Gradient(colors: [Color.white, Color.white]), startPoint: .leading, endPoint: .trailing)
                             :
-                            LinearGradient(gradient: Gradient(colors: [Color(#colorLiteral(red: 0.8078431487, green: 0.02745098062, blue: 0.3333333433, alpha: 1)), Color(#colorLiteral(red: 0.9254902005, green: 0.2352941185, blue: 0.1019607857, alpha: 1))]), startPoint: .leading, endPoint: .trailing),
+                            LinearGradient(gradient: Gradient(colors: [Color(#colorLiteral(red: 0.8078431487, green: 0.02745098062, blue: 0.3333333433, alpha: 1)), Color(#colorLiteral(red: 0.9372549057, green: 0.3490196168, blue: 0.1921568662, alpha: 1))]), startPoint: .topTrailing, endPoint: .bottomLeading),
                             style: StrokeStyle(lineWidth: 2, lineCap: .round)
                         )
                         .frame(width: 58, height: 60)
@@ -208,6 +214,8 @@ struct StoryBubble: View {
         }
     }
 }
+
+
 
 struct StoryView: View {
     @Binding var showStory: Bool

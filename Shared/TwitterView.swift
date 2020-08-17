@@ -8,6 +8,11 @@
 import SwiftUI
 
 struct TwitterView: View {
+    
+    init(){
+        UITabBar.appearance().barTintColor = .white
+    }
+    
     var body: some View {
         TabView{
             content.tabItem {
@@ -29,39 +34,53 @@ struct TwitterView: View {
     }
     
     var content: some View{
-        VStack {
-            HStack{
-                Image(systemName: "person.crop.circle.fill")
-                    .font(.system(size: 24))
-                    .padding(.trailing, 16)
-                Text("Home")
-                    .font(.system(size: 20, weight: .heavy))
-                Spacer()
-                Image(systemName: "wand.and.stars")
-                    .foregroundColor(.blue)
-            }
-            .padding(.horizontal, 16)
-            ScrollView {
-                Divider()
-                
-                ScrollView(.horizontal, showsIndicators: false) {
-                    HStack(alignment: .top, spacing: 16){
-                        EventCard()
-                        LiveEventCard()
-                    }
-                    .padding(.leading, 16)
-                    .padding(.bottom, 8)
+        ZStack(alignment: .bottomTrailing) {
+            VStack {
+                HStack{
+                    Image(systemName: "person.crop.circle.fill")
+                        .font(.system(size: 24))
+                    Spacer()
+                    Image(uiImage: #imageLiteral(resourceName: "Twitter-logo"))
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(height: 20)
+                    Spacer()
+                    Image(systemName: "wand.and.stars")
+                        .foregroundColor(.blue)
                 }
+                .padding(.horizontal, 16)
+                .padding(.bottom, 8)
                 
-                Rectangle()
-                    .foregroundColor(Color(#colorLiteral(red: 0.9015719891, green: 0.9261345267, blue: 0.9429815412, alpha: 1)))
-                
-                Tweet(type: "image", isVerifiedUser: true)
-                Tweet(type: "link", isVerifiedUser: true)
-                Tweet()
-                Tweet(type: "link")
-                Tweet(isVerifiedUser: true)
+                ScrollView {
+                    Divider()
+                    
+                    ScrollView(.horizontal, showsIndicators: false) {
+                        HStack(alignment: .top, spacing: 16){
+                            EventCard()
+                            LiveEventCard()
+                        }
+                        .padding(.leading, 16)
+                        .padding(.bottom, 8)
+                    }
+                    
+                    Rectangle()
+                        .foregroundColor(Color(#colorLiteral(red: 0.9015719891, green: 0.9261345267, blue: 0.9429815412, alpha: 1)))
+                    
+                    Tweet(type: "image", isVerifiedUser: true)
+                    Tweet(type: "link", isVerifiedUser: true)
+                    Tweet()
+                    Tweet(type: "link")
+                    Tweet(isVerifiedUser: true)
+                }
             }
+            
+            Image("icon_tweet")
+                .padding()
+                .background(Color(#colorLiteral(red: 0.1195575371, green: 0.6316951513, blue: 0.9470062852, alpha: 1)))
+                .clipShape(Circle())
+                .offset(x: -10, y: -10)
+                .shadow(color: Color.black.opacity(0.5), radius: 10)
+            
         }
     }
 }

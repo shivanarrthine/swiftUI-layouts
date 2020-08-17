@@ -17,6 +17,8 @@
 		79ACABDB24E9F06E005754AA /* InstagramView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79ACABD924E9F06E005754AA /* InstagramView.swift */; };
 		79ACABDD24EA1942005754AA /* TwitterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79ACABDC24EA1942005754AA /* TwitterView.swift */; };
 		79ACABDE24EA1942005754AA /* TwitterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79ACABDC24EA1942005754AA /* TwitterView.swift */; };
+		79ACABE124EAA742005754AA /* InstagramSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79ACABE024EAA742005754AA /* InstagramSearchView.swift */; };
+		79ACABE224EAA742005754AA /* InstagramSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79ACABE024EAA742005754AA /* InstagramSearchView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,7 @@
 		79ACABCA24E9EFB8005754AA /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
 		79ACABD924E9F06E005754AA /* InstagramView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstagramView.swift; sourceTree = "<group>"; };
 		79ACABDC24EA1942005754AA /* TwitterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitterView.swift; sourceTree = "<group>"; };
+		79ACABE024EAA742005754AA /* InstagramSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstagramSearchView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,7 +68,7 @@
 			children = (
 				79ACABB824E9EFB6005754AA /* SwiftLayoutsApp.swift */,
 				79ACABB924E9EFB6005754AA /* ContentView.swift */,
-				79ACABD924E9F06E005754AA /* InstagramView.swift */,
+				79ACABDF24EAA72B005754AA /* Instagram */,
 				79ACABDC24EA1942005754AA /* TwitterView.swift */,
 				79ACABBA24E9EFB8005754AA /* Assets.xcassets */,
 			);
@@ -96,6 +99,15 @@
 				79ACABCA24E9EFB8005754AA /* macOS.entitlements */,
 			);
 			path = macOS;
+			sourceTree = "<group>";
+		};
+		79ACABDF24EAA72B005754AA /* Instagram */ = {
+			isa = PBXGroup;
+			children = (
+				79ACABD924E9F06E005754AA /* InstagramView.swift */,
+				79ACABE024EAA742005754AA /* InstagramSearchView.swift */,
+			);
+			path = Instagram;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -199,6 +211,7 @@
 				79ACABCB24E9EFB8005754AA /* SwiftLayoutsApp.swift in Sources */,
 				79ACABDD24EA1942005754AA /* TwitterView.swift in Sources */,
 				79ACABDA24E9F06E005754AA /* InstagramView.swift in Sources */,
+				79ACABE124EAA742005754AA /* InstagramSearchView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -210,6 +223,7 @@
 				79ACABCC24E9EFB8005754AA /* SwiftLayoutsApp.swift in Sources */,
 				79ACABDE24EA1942005754AA /* TwitterView.swift in Sources */,
 				79ACABDB24E9F06E005754AA /* InstagramView.swift in Sources */,
+				79ACABE224EAA742005754AA /* InstagramSearchView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
