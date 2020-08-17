@@ -15,6 +15,8 @@
 		79ACABD024E9EFB8005754AA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79ACABBA24E9EFB8005754AA /* Assets.xcassets */; };
 		79ACABDA24E9F06E005754AA /* InstagramView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79ACABD924E9F06E005754AA /* InstagramView.swift */; };
 		79ACABDB24E9F06E005754AA /* InstagramView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79ACABD924E9F06E005754AA /* InstagramView.swift */; };
+		79ACABDD24EA1942005754AA /* TwitterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79ACABDC24EA1942005754AA /* TwitterView.swift */; };
+		79ACABDE24EA1942005754AA /* TwitterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79ACABDC24EA1942005754AA /* TwitterView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +29,7 @@
 		79ACABC924E9EFB8005754AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		79ACABCA24E9EFB8005754AA /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
 		79ACABD924E9F06E005754AA /* InstagramView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstagramView.swift; sourceTree = "<group>"; };
+		79ACABDC24EA1942005754AA /* TwitterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitterView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +66,7 @@
 				79ACABB824E9EFB6005754AA /* SwiftLayoutsApp.swift */,
 				79ACABB924E9EFB6005754AA /* ContentView.swift */,
 				79ACABD924E9F06E005754AA /* InstagramView.swift */,
+				79ACABDC24EA1942005754AA /* TwitterView.swift */,
 				79ACABBA24E9EFB8005754AA /* Assets.xcassets */,
 			);
 			path = Shared;
@@ -193,6 +197,7 @@
 			files = (
 				79ACABCD24E9EFB8005754AA /* ContentView.swift in Sources */,
 				79ACABCB24E9EFB8005754AA /* SwiftLayoutsApp.swift in Sources */,
+				79ACABDD24EA1942005754AA /* TwitterView.swift in Sources */,
 				79ACABDA24E9F06E005754AA /* InstagramView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -203,6 +208,7 @@
 			files = (
 				79ACABCE24E9EFB8005754AA /* ContentView.swift in Sources */,
 				79ACABCC24E9EFB8005754AA /* SwiftLayoutsApp.swift in Sources */,
+				79ACABDE24EA1942005754AA /* TwitterView.swift in Sources */,
 				79ACABDB24E9F06E005754AA /* InstagramView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

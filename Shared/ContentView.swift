@@ -10,14 +10,22 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         NavigationView{
+            
             List {
                 NavigationLink(
                     destination: InstagramView(),
                     label: {
                         Text("Instagram")
                 })
+                NavigationLink(
+                    destination: TwitterView(),
+                    label: {
+                        Text("Twitter")
+                })
             }
             .listStyle(SidebarListStyle())
+            
+            .navigationTitle("Swift Layouts")
         }
     }
 }

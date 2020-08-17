@@ -9,22 +9,67 @@ import SwiftUI
 
 struct InstagramView: View {
     var body: some View {
-        ScrollView {
-            ScrollView(.horizontal, showsIndicators: false){
-                HStack(spacing: 16) {
-                    InstagramStory(username: "Your story", isViewed: true, isUser: true)
-                    ForEach(0 ..< 10) { item in
-                        InstagramStory()
-                    }
-                }
+        TabView{
+            content.tabItem {
+                Image(systemName: "house.fill")
+            }
+            
+            Text("Feed").tabItem {
+                Image(systemName: "magnifyingglass")
+            }
+            
+            Text("Post").tabItem {
+                Image(systemName: "plus.square")
+            }
+            
+            Text("Activity").tabItem {
+                Image(systemName: "heart")
+            }
+            
+            Text("Profile").tabItem {
+                Image(systemName: "person")
+            }
+        }
+        .accentColor(.primary)
+        
+    }
+    
+    var content: some View {
+        VStack {
+            HStack{
+                Image(systemName: "camera")
+                    .font(.system(size: 20))
+                Spacer()
+                Image("Instagram-logo")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(height: 40)
+                Spacer()
+                Image(systemName: "paperplane")
+                    .font(.system(size: 20))
             }
             .padding(.horizontal, 16)
-            Divider()
-                .padding(.vertical, 8)
             
-            ForEach(0 ..< 5) { item in
-                InstagramPost()
+            
+            ScrollView {
+                Divider()
+                ScrollView(.horizontal, showsIndicators: false){
+                    HStack(spacing: 24) {
+                        InstagramStory(username: "Your story", isViewed: true, isUser: true)
+                        ForEach(0 ..< 10) { item in
+                            InstagramStory()
+                        }
+                    }
+                }
+                .padding(.leading, 16)
+                Divider()
+                    .padding(.vertical, 8)
+                
+                ForEach(0 ..< 5) { item in
+                    InstagramPost()
+                }
             }
+        
         }
     }
 }
@@ -53,7 +98,7 @@ struct InstagramPost: View {
             .padding(.horizontal, 16)
             
             Rectangle()
-                .frame(height: 300)
+                .frame(height: 340)
             
             HStack(spacing: 16) {
                 Image(systemName: "heart")
@@ -99,28 +144,30 @@ struct InstagramStory: View {
     
     var body: some View {
         VStack(alignment: .center) {
-            ZStack {
-                Circle()
-                    .stroke(
-                        isViewed ?
-                            LinearGradient(gradient: Gradient(colors: [Color.white, Color.white]), startPoint: .leading, endPoint: .trailing)
-                        :
-                        LinearGradient(gradient: Gradient(colors: [Color(#colorLiteral(red: 0.8078431487, green: 0.02745098062, blue: 0.3333333433, alpha: 1)), Color(#colorLiteral(red: 0.9254902005, green: 0.2352941185, blue: 0.1019607857, alpha: 1))]), startPoint: .leading, endPoint: .trailing),
-                        style: StrokeStyle(lineWidth: 2, lineCap: .round)
-                    )
-                    .frame(width: 48, height: 48)
-                Image(systemName: "person.crop.circle.fill")
-                    .font(.system(size: 44))
+            ZStack(alignment: .bottomTrailing) {
+                ZStack {
+                    Circle()
+                        .stroke(
+                            isViewed ?
+                                LinearGradient(gradient: Gradient(colors: [Color.white, Color.white]), startPoint: .leading, endPoint: .trailing)
+                            :
+                            LinearGradient(gradient: Gradient(colors: [Color(#colorLiteral(red: 0.8078431487, green: 0.02745098062, blue: 0.3333333433, alpha: 1)), Color(#colorLiteral(red: 0.9254902005, green: 0.2352941185, blue: 0.1019607857, alpha: 1))]), startPoint: .leading, endPoint: .trailing),
+                            style: StrokeStyle(lineWidth: 2, lineCap: .round)
+                        )
+                        .frame(width: 58, height: 60)
+                    Image(systemName: "person.crop.circle.fill")
+                        .font(.system(size: 52))
+                }
+                
                 
                 if isUser {
-                    Circle()
-                        .foregroundColor(.white)
-                        .frame(width: 20, height: 20)
-                        .offset(x: 16, y: 16)
-                    Image(systemName: "plus.circle.fill")
-                        .foregroundColor(.blue)
-                        .background(Color.white)
-                        .offset(x: 16, y: 16)
+                    ZStack {
+                        Circle()
+                            .foregroundColor(.white)
+                            .frame(width: 20, height: 20)
+                        Image(systemName: "plus.circle.fill")
+                            .foregroundColor(.blue)
+                    }
                 }
                 
             }
