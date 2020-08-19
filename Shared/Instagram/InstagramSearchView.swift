@@ -34,10 +34,10 @@ struct InstagramSearchView: View {
                 LazyVGrid(
                     columns: [
                         GridItem(.adaptive(minimum: 120),
-                        spacing: 2
+                        spacing: 1
                         )
                     ],
-                    spacing: 2,
+                    spacing: 1,
                     pinnedViews: [.sectionHeaders]
                 ){
                     Section(header: filterBar) {

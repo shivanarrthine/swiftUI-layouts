@@ -101,7 +101,7 @@ struct InstagramView: View {
                 Image(systemName: "heart")
             }
             
-            Text("Profile").tabItem {
+            InstagramProfileView().tabItem {
                 Image(systemName: "person.crop.circle.fill")
             }
         }

@@ -19,6 +19,8 @@
 		79ACABDE24EA1942005754AA /* TwitterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79ACABDC24EA1942005754AA /* TwitterView.swift */; };
 		79ACABE124EAA742005754AA /* InstagramSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79ACABE024EAA742005754AA /* InstagramSearchView.swift */; };
 		79ACABE224EAA742005754AA /* InstagramSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79ACABE024EAA742005754AA /* InstagramSearchView.swift */; };
+		79ACABE424EBC894005754AA /* InstagramProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79ACABE324EBC893005754AA /* InstagramProfileView.swift */; };
+		79ACABE524EBC894005754AA /* InstagramProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79ACABE324EBC893005754AA /* InstagramProfileView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +35,7 @@
 		79ACABD924E9F06E005754AA /* InstagramView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstagramView.swift; sourceTree = "<group>"; };
 		79ACABDC24EA1942005754AA /* TwitterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitterView.swift; sourceTree = "<group>"; };
 		79ACABE024EAA742005754AA /* InstagramSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstagramSearchView.swift; sourceTree = "<group>"; };
+		79ACABE324EBC893005754AA /* InstagramProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstagramProfileView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +109,7 @@
 			children = (
 				79ACABD924E9F06E005754AA /* InstagramView.swift */,
 				79ACABE024EAA742005754AA /* InstagramSearchView.swift */,
+				79ACABE324EBC893005754AA /* InstagramProfileView.swift */,
 			);
 			path = Instagram;
 			sourceTree = "<group>";
@@ -126,6 +130,8 @@
 			dependencies = (
 			);
 			name = "SwiftLayouts (iOS)";
+			packageProductDependencies = (
+			);
 			productName = "SwiftLayouts (iOS)";
 			productReference = 79ACABBF24E9EFB8005754AA /* SwiftLayouts.app */;
 			productType = "com.apple.product-type.application";
@@ -173,6 +179,8 @@
 				Base,
 			);
 			mainGroup = 79ACABB224E9EFB6005754AA;
+			packageReferences = (
+			);
 			productRefGroup = 79ACABC024E9EFB8005754AA /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -208,6 +216,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				79ACABCD24E9EFB8005754AA /* ContentView.swift in Sources */,
+				79ACABE424EBC894005754AA /* InstagramProfileView.swift in Sources */,
 				79ACABCB24E9EFB8005754AA /* SwiftLayoutsApp.swift in Sources */,
 				79ACABDD24EA1942005754AA /* TwitterView.swift in Sources */,
 				79ACABDA24E9F06E005754AA /* InstagramView.swift in Sources */,
@@ -220,6 +229,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				79ACABCE24E9EFB8005754AA /* ContentView.swift in Sources */,
+				79ACABE524EBC894005754AA /* InstagramProfileView.swift in Sources */,
 				79ACABCC24E9EFB8005754AA /* SwiftLayoutsApp.swift in Sources */,
 				79ACABDE24EA1942005754AA /* TwitterView.swift in Sources */,
 				79ACABDB24E9F06E005754AA /* InstagramView.swift in Sources */,
