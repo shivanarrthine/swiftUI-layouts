@@ -105,6 +105,7 @@ struct FilterLabel: View {
         .padding(.vertical, 8)
         .padding(.horizontal, 24)
         .background(Color.white)
+        .frame(maxWidth: .infinity)
         .clipShape(RoundedRectangle(cornerRadius: 4))
         .overlay(
             RoundedRectangle(cornerRadius: 4)

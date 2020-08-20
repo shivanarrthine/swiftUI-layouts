@@ -8,90 +8,23 @@
 import SwiftUI
 
 struct InstagramProfileView: View {
-    
     @State var selectedView = 1
-    @State var showAccList = false
+    @Binding var showAccList : Bool
+    @Binding var showMenu : Bool
     
     
     var body: some View {
-        VStack {
-            nav
-            
-            ScrollView {
-                header
+        ZStack(alignment: .bottomLeading) {
+            VStack {
+                nav
                 
-                LazyVGrid(
-                    columns: [
-                        GridItem(.adaptive(minimum: 120),
-                        spacing: 1
-                        )
-                    ],
-                    spacing: 1,
-                    pinnedViews: [.sectionHeaders]
-                ){
-                    Section(header: subtabs) {
-                        if selectedView == 1{
-                            ForEach(0 ..< 30) { item in
-                                ZStack(alignment: .topTrailing) {
-                                    Rectangle()
-                                        .frame(height: 120)
-                                    if(item % 5 == 0){
-                                        Image(systemName: "square.fill.on.square.fill")
-                                            .foregroundColor(.white)
-                                            .offset(x: -6, y: 6)
-                                    }
-                                    
-                                }
-                            }
-                        }
-                        else if selectedView == 2 {
-                            // TOFIX: Bug when using ForEach
-                            Rectangle()
-                                .foregroundColor(Color(#colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)))
-                                .frame(height: 120)
-                            Rectangle()
-                                .foregroundColor(Color(#colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)))
-                                .frame(height: 120)
-                            Rectangle()
-                                .foregroundColor(Color(#colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)))
-                                .frame(height: 120)
-                            Rectangle()
-                                .foregroundColor(Color(#colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)))
-                                .frame(height: 120)
-                            Rectangle()
-                                .foregroundColor(Color(#colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)))
-                                .frame(height: 120)
-                            Rectangle()
-                                .foregroundColor(Color(#colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)))
-                                .frame(height: 120)
-                            Rectangle()
-                                .foregroundColor(Color(#colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)))
-                                .frame(height: 120)
-                            Rectangle()
-                                .foregroundColor(Color(#colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)))
-                                .frame(height: 120)
-                        }
-                        
-                    }
+                ScrollView {
+                    header
+                    content
                 }
-                
-                
             }
-            .overlay(
-                self.showAccList ?
-                    VStack {
-                        Text("Test")
-                    }
-                    .frame(height: screen.height/2)
-                    .frame(maxWidth: .infinity)
-                    .background(Color.white)
-                    .clipShape(RoundedRectangle(cornerRadius: 22))
-                    .shadow(radius: 10)
-                    : nil
-            )
-            .animation(.easeIn)
-            
         }
+        
     }
     
     var nav: some View {
@@ -115,15 +48,14 @@ struct InstagramProfileView: View {
             }
             .accentColor(.primary)
             
-//            .sheet(isPresented: $showAccList) {
-//                Text("acc list")
-//                    .frame(height: 200)
-//            }
-            
-            
             Spacer()
             
-            Image(systemName: "line.horizontal.3")
+            Button(action: {
+                self.showMenu.toggle()
+            }){
+                Image(systemName: "line.horizontal.3")
+            }
+            .accentColor(.primary)
         }
         .padding(.horizontal, 16)
     }
@@ -237,14 +169,70 @@ struct InstagramProfileView: View {
                 .frame(width: screen.width/2, height: 2)
                 .foregroundColor(.primary)
                 .offset(x: selectedView == 1 ? 0 : screen.width/2)
-//                .animation(.easeInOut(duration: 0.2))
         }
         .background(Color.white)
+    }
+    
+    var content: some View {
+        LazyVGrid(
+            columns: [
+                GridItem(.adaptive(minimum: 120),
+                spacing: 1
+                )
+            ],
+            spacing: 1,
+            pinnedViews: [.sectionHeaders]
+        ){
+            Section(header: subtabs) {
+                if selectedView == 1{
+                    ForEach(0 ..< 30) { item in
+                        ZStack(alignment: .topTrailing) {
+                            Rectangle()
+                                .frame(height: 120)
+                            if(item % 5 == 0){
+                                Image(systemName: "square.fill.on.square.fill")
+                                    .foregroundColor(.white)
+                                    .offset(x: -6, y: 6)
+                            }
+                            
+                        }
+                    }
+                }
+                else if selectedView == 2 {
+                    // TOFIX: Bug when using ForEach
+                    Rectangle()
+                        .foregroundColor(Color(#colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)))
+                        .frame(height: 120)
+                    Rectangle()
+                        .foregroundColor(Color(#colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)))
+                        .frame(height: 120)
+                    Rectangle()
+                        .foregroundColor(Color(#colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)))
+                        .frame(height: 120)
+                    Rectangle()
+                        .foregroundColor(Color(#colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)))
+                        .frame(height: 120)
+                    Rectangle()
+                        .foregroundColor(Color(#colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)))
+                        .frame(height: 120)
+                    Rectangle()
+                        .foregroundColor(Color(#colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)))
+                        .frame(height: 120)
+                    Rectangle()
+                        .foregroundColor(Color(#colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)))
+                        .frame(height: 120)
+                    Rectangle()
+                        .foregroundColor(Color(#colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)))
+                        .frame(height: 120)
+                }
+                
+            }
+        }
     }
 }
 
 struct InstagramProfileView_Previews: PreviewProvider {
     static var previews: some View {
-        InstagramProfileView()
+        InstagramProfileView(showAccList: .constant(false), showMenu: .constant(false))
     }
 }

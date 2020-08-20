@@ -11,6 +11,8 @@ let screen = UIScreen.main.bounds
 
 struct InstagramView: View {
     @State var showStory : Bool = false
+    @State var showAccList = false
+    @State var showMenu = false
     
     init(){
         UITabBar.appearance().barTintColor = .white
@@ -26,6 +28,10 @@ struct InstagramView: View {
                 .opacity(showStory ? 1 : 0)
                 .edgesIgnoringSafeArea(.all)
             fullStoryContent
+            
+            // Overlays
+            InstagramAccountView(showAccList: $showAccList)
+            InstagramMenuView(showMenu: $showMenu)
         }
     }
     
@@ -101,7 +107,7 @@ struct InstagramView: View {
                 Image(systemName: "heart")
             }
             
-            InstagramProfileView().tabItem {
+            InstagramProfileView(showAccList: $showAccList, showMenu: $showMenu).tabItem {
                 Image(systemName: "person.crop.circle.fill")
             }
         }

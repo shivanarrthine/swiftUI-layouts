@@ -21,6 +21,10 @@
 		79ACABE224EAA742005754AA /* InstagramSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79ACABE024EAA742005754AA /* InstagramSearchView.swift */; };
 		79ACABE424EBC894005754AA /* InstagramProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79ACABE324EBC893005754AA /* InstagramProfileView.swift */; };
 		79ACABE524EBC894005754AA /* InstagramProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79ACABE324EBC893005754AA /* InstagramProfileView.swift */; };
+		79ACABEA24EE736D005754AA /* InstagramAccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79ACABE924EE736D005754AA /* InstagramAccountView.swift */; };
+		79ACABEB24EE736D005754AA /* InstagramAccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79ACABE924EE736D005754AA /* InstagramAccountView.swift */; };
+		79ACABED24EE97E9005754AA /* InstagramMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79ACABEC24EE97E8005754AA /* InstagramMenuView.swift */; };
+		79ACABEE24EE97E9005754AA /* InstagramMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79ACABEC24EE97E8005754AA /* InstagramMenuView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +40,8 @@
 		79ACABDC24EA1942005754AA /* TwitterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitterView.swift; sourceTree = "<group>"; };
 		79ACABE024EAA742005754AA /* InstagramSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstagramSearchView.swift; sourceTree = "<group>"; };
 		79ACABE324EBC893005754AA /* InstagramProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstagramProfileView.swift; sourceTree = "<group>"; };
+		79ACABE924EE736D005754AA /* InstagramAccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstagramAccountView.swift; sourceTree = "<group>"; };
+		79ACABEC24EE97E8005754AA /* InstagramMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstagramMenuView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,7 +78,7 @@
 				79ACABB824E9EFB6005754AA /* SwiftLayoutsApp.swift */,
 				79ACABB924E9EFB6005754AA /* ContentView.swift */,
 				79ACABDF24EAA72B005754AA /* Instagram */,
-				79ACABDC24EA1942005754AA /* TwitterView.swift */,
+				79ACABEF24EE9E86005754AA /* Twitter */,
 				79ACABBA24E9EFB8005754AA /* Assets.xcassets */,
 			);
 			path = Shared;
@@ -110,8 +116,18 @@
 				79ACABD924E9F06E005754AA /* InstagramView.swift */,
 				79ACABE024EAA742005754AA /* InstagramSearchView.swift */,
 				79ACABE324EBC893005754AA /* InstagramProfileView.swift */,
+				79ACABE924EE736D005754AA /* InstagramAccountView.swift */,
+				79ACABEC24EE97E8005754AA /* InstagramMenuView.swift */,
 			);
 			path = Instagram;
+			sourceTree = "<group>";
+		};
+		79ACABEF24EE9E86005754AA /* Twitter */ = {
+			isa = PBXGroup;
+			children = (
+				79ACABDC24EA1942005754AA /* TwitterView.swift */,
+			);
+			path = Twitter;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -215,6 +231,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				79ACABED24EE97E9005754AA /* InstagramMenuView.swift in Sources */,
+				79ACABEA24EE736D005754AA /* InstagramAccountView.swift in Sources */,
 				79ACABCD24E9EFB8005754AA /* ContentView.swift in Sources */,
 				79ACABE424EBC894005754AA /* InstagramProfileView.swift in Sources */,
 				79ACABCB24E9EFB8005754AA /* SwiftLayoutsApp.swift in Sources */,
@@ -228,6 +246,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				79ACABEE24EE97E9005754AA /* InstagramMenuView.swift in Sources */,
+				79ACABEB24EE736D005754AA /* InstagramAccountView.swift in Sources */,
 				79ACABCE24E9EFB8005754AA /* ContentView.swift in Sources */,
 				79ACABE524EBC894005754AA /* InstagramProfileView.swift in Sources */,
 				79ACABCC24E9EFB8005754AA /* SwiftLayoutsApp.swift in Sources */,
